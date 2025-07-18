@@ -50,8 +50,8 @@ export function Header() {
           delay: 0.6
         }} className="text-base md:text-lg lg:text-xl text-portfolio-text-light max-w-2xl mx-auto mb-6 text-slate-300 font-normal">Professor de Língua Portuguesa 
 <br />Especialista em Redação
- 
-Avaliador ENEM/ENADE</motion.p>
+ <br>Avaliador ENEM/ENADE</br>
+</motion.p>
           
           <motion.div className="flex flex-col md:flex-row gap-4 md:gap-6 justify-center items-center text-portfolio-text-light text-sm md:text-base" initial={{
           opacity: 0,
