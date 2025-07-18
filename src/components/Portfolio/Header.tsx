@@ -65,7 +65,14 @@ export function Header() {
         }}>
             <div className="flex items-center gap-2">
               <Phone className="w-5 h-5 dark:text-gray-300" />
-              <span className="text-lg text-slate-800 dark:text-gray-200">(71) 99974-4116</span>
+              <a 
+                href="https://wa.me/5571999744116"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-lg text-blue-600 hover:text-blue-800 dark:text-gray-200 dark:hover:text-gray-100 underline"
+              >
+                (71) 99974-4116
+              </a>
             </div>
             <div className="flex items-center gap-2">
               <Mail className="w-5 h-5 dark:text-gray-300" />
