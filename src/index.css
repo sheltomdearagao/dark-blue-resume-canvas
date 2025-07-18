@@ -36,12 +36,6 @@ All colors MUST be HSL.
     --input: 214 31% 91%;
     --ring: 215 25% 27%;
 
-    /* Design System Tokens - Light Theme */
-    --token-color-text-strong: 215 25% 20%;
-    --token-color-text-inverse: 0 0% 100%;
-    --token-color-surface-inverse: 220 13% 91%;
-    --token-color-surface-active: 215 25% 27%;
-
     /* Portfolio specific colors */
     --portfolio-primary: 215 25% 27%;
     --portfolio-primary-light: 215 25% 35%;
@@ -115,12 +109,6 @@ All colors MUST be HSL.
     --input: 215 25% 20%;
     --ring: 215 100% 60%;
 
-    /* Design System Tokens - Dark Theme */
-    --token-color-text-strong: 215 25% 20%;
-    --token-color-text-inverse: 0 0% 100%;
-    --token-color-surface-inverse: 215 25% 85%;
-    --token-color-surface-active: 215 25% 27%;
-
     /* Portfolio specific colors for dark mode */
     --portfolio-primary: 0 0% 95%;
     --portfolio-primary-light: 215 25% 75%;
@@ -173,39 +161,20 @@ html {
   transform: scale(1.02);
 }
 
-/* Hide scrollbar for all browsers */
-* {
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* Internet Explorer 10+ */
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-*::-webkit-scrollbar {
-  display: none; /* Safari and Chrome */
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
 }
 
-/* Enhanced button states using design system tokens */
-.btn-enhanced {
-  transition: all 0.2s ease-in-out;
-  position: relative;
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--portfolio-primary));
+  border-radius: 4px;
 }
 
-.btn-enhanced:focus-visible {
-  outline: 2px solid hsl(var(--ring));
-  outline-offset: 2px;
-}
-
-.btn-enhanced:active {
-  transform: translateY(1px);
-}
-
-/* Light theme button active state */
-:root .btn-enhanced:active {
-  color: hsl(var(--token-color-text-strong));
-  background-color: hsl(var(--token-color-surface-inverse));
-}
-
-/* Dark theme button active state */
-.dark .btn-enhanced:active {
-  color: hsl(var(--token-color-text-inverse));
-  background-color: hsl(var(--token-color-surface-active));
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--portfolio-primary-light));
 }
