@@ -112,6 +112,14 @@ export default {
 				'timeline-appear': {
 					'0%': { height: '0' },
 					'100%': { height: '100%' }
+				},
+				'aurora': {
+					from: {
+						backgroundPosition: "50% 50%, 50% 50%"
+					},
+					to: {
+						backgroundPosition: "350% 50%, 350% 50%"
+					}
 				}
 			},
 			animation: {
@@ -120,7 +128,8 @@ export default {
 				'fade-in': 'fade-in 0.6s ease-out',
 				'slide-in-left': 'slide-in-left 0.8s ease-out',
 				'pulse-dot': 'pulse-dot 2s infinite',
-				'timeline-appear': 'timeline-appear 1s ease-out'
+				'timeline-appear': 'timeline-appear 1s ease-out',
+				'aurora': 'aurora 60s linear infinite'
 			},
 			backgroundImage: {
 				'dots-pattern': 'var(--dots-pattern)',
