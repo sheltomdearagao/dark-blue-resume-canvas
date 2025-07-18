@@ -24,7 +24,7 @@ export function Header() {
         }} transition={{
           duration: 0.6,
           delay: 0.2
-        }} className="md:text-6xl lg:text-7xl font-bold text-portfolio-primary mb-4 text-5xl">
+        }} className="md:text-6xl lg:text-7xl font-bold text-portfolio-primary dark:text-white mb-4 text-5xl">
             SHELTOM DELANO
           </motion.h1>
           
@@ -37,7 +37,7 @@ export function Header() {
         }} transition={{
           duration: 0.6,
           delay: 0.4
-        }} className="text-xl md:text-2xl lg:text-3xl text-portfolio-primary-light mb-3 font-medium text-slate-700">OLIVEIRA DE ARAGÃO</motion.h2>
+        }} className="text-xl md:text-2xl lg:text-3xl text-portfolio-primary-light dark:text-gray-200 mb-3 font-medium text-slate-700">OLIVEIRA DE ARAGÃO</motion.h2>
           
           <motion.p initial={{
           opacity: 0,
@@ -48,12 +48,12 @@ export function Header() {
         }} transition={{
           duration: 0.6,
           delay: 0.6
-        }} className="text-base md:text-lg lg:text-xl text-portfolio-text-light max-w-2xl mx-auto mb-6 font-normal text-slate-800">Professor de Língua Portuguesa 
+        }} className="text-base md:text-lg lg:text-xl text-portfolio-text-light dark:text-gray-300 max-w-2xl mx-auto mb-6 font-normal text-slate-800">Professor de Língua Portuguesa 
           <br />Especialista em Redação
  <br />Avaliador ENEM/ENADE
         </motion.p>
           
-          <motion.div className="flex flex-col md:flex-row gap-4 md:gap-6 justify-center items-center text-portfolio-text-light text-sm md:text-base" initial={{
+          <motion.div className="flex flex-col md:flex-row gap-4 md:gap-6 justify-center items-center text-portfolio-text-light dark:text-gray-300 text-sm md:text-base" initial={{
           opacity: 0,
           y: 30
         }} animate={{
@@ -64,16 +64,16 @@ export function Header() {
           delay: 0.8
         }}>
             <div className="flex items-center gap-2">
-              <Phone className="w-5 h-5" />
-              <span className="text-lg text-slate-800">(71) 99974-4116</span>
+              <Phone className="w-5 h-5 dark:text-gray-300" />
+              <span className="text-lg text-slate-800 dark:text-gray-200">(71) 99974-4116</span>
             </div>
             <div className="flex items-center gap-2">
-              <Mail className="w-5 h-5" />
-              <span className="text-lg text-slate-800">sheltomdearagao@gmail.com</span>
+              <Mail className="w-5 h-5 dark:text-gray-300" />
+              <span className="text-lg text-slate-800 dark:text-gray-200">sheltomdearagao@gmail.com</span>
             </div>
             <div className="flex items-center gap-2">
-              <MapPin className="w-5 h-5" />
-              <span className="text-slate-800">Salvador - BA</span>
+              <MapPin className="w-5 h-5 dark:text-gray-300" />
+              <span className="text-slate-800 dark:text-gray-200">Salvador - BA</span>
             </div>
           </motion.div>
         </motion.div>

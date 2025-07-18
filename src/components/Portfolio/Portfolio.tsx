@@ -6,6 +6,7 @@ import { Timeline } from "./Timeline";
 import { References } from "./References";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { AuroraBackground } from "@/components/ui/aurora-background";
+import { SparklesBackground } from "@/components/ui/sparkles-background";
 import { useTheme } from "@/hooks/use-theme";
 export function Portfolio() {
   const { theme } = useTheme();
@@ -46,7 +47,7 @@ export function Portfolio() {
     </AuroraBackground>;
   }
   
-  return <div className="min-h-screen bg-background">
+  return <SparklesBackground>
       <ThemeToggle />
       <Header />
       
@@ -77,5 +78,5 @@ export function Portfolio() {
           </TabsContent>
         </Tabs>
       </div>
-    </div>;
+    </SparklesBackground>;
 }
