@@ -49,7 +49,7 @@ export function Header() {
           duration: 0.6,
           delay: 0.6
         }} className="text-base md:text-lg lg:text-xl text-portfolio-text-light max-w-2xl mx-auto mb-6 text-slate-300 font-normal">Professor de Língua Portuguesa 
-<br>Especialista em Redação </br>
+<br />Especialista em Redação
  
 Avaliador ENEM/ENADE</motion.p>
           
