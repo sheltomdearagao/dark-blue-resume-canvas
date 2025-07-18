@@ -9,15 +9,15 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        default: "bg-primary text-primary-foreground hover:bg-primary/90 active:btn-active-light dark:active:btn-active-dark focus:btn-focus-ring",
         destructive:
-          "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+          "bg-destructive text-destructive-foreground hover:bg-destructive/90 active:btn-active-light dark:active:btn-active-dark focus:btn-focus-ring",
         outline:
-          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+          "border border-input bg-background hover:bg-accent hover:text-accent-foreground active:btn-active-light dark:active:btn-active-dark focus:btn-focus-ring",
         secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
+          "bg-secondary text-secondary-foreground hover:bg-secondary/80 active:btn-active-light dark:active:btn-active-dark focus:btn-focus-ring",
+        ghost: "hover:bg-accent hover:text-accent-foreground active:btn-active-light dark:active:btn-active-dark focus:btn-focus-ring",
+        link: "text-primary underline-offset-4 hover:underline active:btn-active-light dark:active:btn-active-dark focus:btn-focus-ring",
       },
       size: {
         default: "h-10 px-4 py-2",
@@ -42,10 +42,36 @@ export interface ButtonProps
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button"
+    
+    // Ensure event handlers are not affected by theme changes
+    const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+      // Preserve original onClick behavior
+      if (props.onClick) {
+        props.onClick(event)
+      }
+    }
+
+    const handleFocus = (event: React.FocusEvent<HTMLButtonElement>) => {
+      // Preserve original onFocus behavior
+      if (props.onFocus) {
+        props.onFocus(event)
+      }
+    }
+
+    const handleBlur = (event: React.FocusEvent<HTMLButtonElement>) => {
+      // Preserve original onBlur behavior
+      if (props.onBlur) {
+        props.onBlur(event)
+      }
+    }
+
     return (
       <Comp
         className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
+        onClick={handleClick}
+        onFocus={handleFocus}
+        onBlur={handleBlur}
         {...props}
       />
     )

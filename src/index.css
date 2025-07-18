@@ -78,6 +78,12 @@ All colors MUST be HSL.
     --sidebar-border: 220 13% 91%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Design System Tokens for Button States - Light Theme */
+    --token-color-text-strong: 215 25% 20%; /* Dark text for strong contrast */
+    --token-color-surface-inverse: 0 0% 90%; /* Light gray for inverse surface */
+    --token-color-text-inverse: 0 0% 100%; /* White text for inverse */
+    --token-color-surface-active: 215 25% 15%; /* Dark primary for active state */
   }
 
   .dark {
@@ -128,6 +134,12 @@ All colors MUST be HSL.
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Design System Tokens for Button States - Dark Theme */
+    --token-color-text-strong: 0 0% 95%; /* Light text for strong contrast */
+    --token-color-surface-inverse: 0 0% 20%; /* Dark gray for inverse surface */
+    --token-color-text-inverse: 0 0% 100%; /* White text for inverse */
+    --token-color-surface-active: 215 100% 60%; /* Bright accent for active state */
   }
 }
 
@@ -177,4 +189,31 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
   background: hsl(var(--portfolio-primary-light));
+}
+
+/* Button States - Design System Implementation */
+@layer components {
+  /* Light Theme Button States */
+  .btn-active-light {
+    color: hsl(var(--token-color-text-strong));
+    background-color: hsl(var(--token-color-surface-inverse));
+  }
+
+  /* Dark Theme Button States */
+  .btn-active-dark {
+    color: hsl(var(--token-color-text-inverse));
+    background-color: hsl(var(--token-color-surface-active));
+  }
+
+  /* Focus Ring for Accessibility (WCAG Compliant) */
+  .btn-focus-ring {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+
+  /* Focus Ring for Dark Theme */
+  .dark .btn-focus-ring {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
 }

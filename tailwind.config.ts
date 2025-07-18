@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import tailwindcssAnimate from "tailwindcss-animate";
 
 export default {
 	darkMode: ["class"],
@@ -73,6 +74,13 @@ export default {
 					line: 'hsl(var(--timeline-line))',
 					point: 'hsl(var(--timeline-point))',
 					bg: 'hsl(var(--timeline-bg))'
+				},
+				// Design System Tokens for Button States
+				token: {
+					'text-strong': 'hsl(var(--token-color-text-strong))',
+					'surface-inverse': 'hsl(var(--token-color-surface-inverse))',
+					'text-inverse': 'hsl(var(--token-color-text-inverse))',
+					'surface-active': 'hsl(var(--token-color-surface-active))'
 				}
 			},
 			borderRadius: {
@@ -142,5 +150,5 @@ export default {
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [tailwindcssAnimate],
 } satisfies Config;
