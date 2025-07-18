@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Mail, MapPin, Phone } from "lucide-react";
 export function Header() {
-  return <section className="relative h-[80vh] md:h-[90vh] flex items-center justify-center overflow-hidden">
+  return <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background with dots pattern */}
       <div className="absolute inset-0 bg-dots-sm bg-dots-sm opacity-20"></div>
       
@@ -14,7 +14,7 @@ export function Header() {
         y: 0
       }} transition={{
         duration: 0.8
-      }} className="text-center mx-0 my-0 px-0 py-0">
+      }} className="text-center">
           <motion.h1 initial={{
           opacity: 0,
           scale: 0.5
