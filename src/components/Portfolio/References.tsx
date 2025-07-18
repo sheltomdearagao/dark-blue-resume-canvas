@@ -10,52 +10,48 @@ const references = [
 
 export function References() {
   return (
-    <section className="py-20">
-      <div className="container mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="max-w-4xl mx-auto"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold text-portfolio-primary mb-12 text-center">
-            REFERÊNCIAS
-          </h2>
-          
-          <div className="grid md:grid-cols-2 gap-6">
-            {references.map((reference, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-card p-6 rounded-lg shadow-sm border border-border hover:shadow-md transition-shadow duration-200"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-portfolio-accent/10 rounded-full flex items-center justify-center">
-                    <User className="w-6 h-6 text-portfolio-accent" />
-                  </div>
-                  
-                  <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-portfolio-primary mb-1">
-                      {reference.name}
-                    </h3>
-                    <p className="text-portfolio-text-light mb-3">
-                      {reference.position}
-                    </p>
-                    <div className="flex items-center gap-2 text-portfolio-text-light">
-                      <Phone className="w-4 h-4" />
-                      <span className="text-sm">{reference.phone}</span>
-                    </div>
+    <div className="py-8 md:py-12">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="max-w-4xl mx-auto"
+      >
+        <h2 className="text-2xl md:text-3xl font-bold text-portfolio-primary mb-6 text-center">
+          REFERÊNCIAS
+        </h2>
+        
+        <div className="grid md:grid-cols-2 gap-4">
+          {references.map((reference, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: index * 0.05 }}
+              className="bg-card p-4 rounded-lg shadow-sm border border-border hover:shadow-md transition-all duration-200"
+            >
+              <div className="flex items-start gap-3">
+                <div className="w-10 h-10 bg-portfolio-accent/10 rounded-full flex items-center justify-center">
+                  <User className="w-5 h-5 text-portfolio-accent" />
+                </div>
+                
+                <div className="flex-1">
+                  <h3 className="text-base font-semibold text-portfolio-primary mb-1">
+                    {reference.name}
+                  </h3>
+                  <p className="text-sm text-portfolio-text-light mb-2">
+                    {reference.position}
+                  </p>
+                  <div className="flex items-center gap-2 text-portfolio-text-light">
+                    <Phone className="w-4 h-4" />
+                    <span className="text-xs">{reference.phone}</span>
                   </div>
                 </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-      </div>
-    </section>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
+    </div>
   )
 }

@@ -14,36 +14,32 @@ const skills = [
 
 export function Skills() {
   return (
-    <section className="py-20">
-      <div className="container mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="max-w-4xl mx-auto"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold text-portfolio-primary mb-12 text-center">
-            HABILIDADES
-          </h2>
-          
-          <div className="grid md:grid-cols-2 gap-6">
-            {skills.map((skill, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="flex items-start gap-3 p-4 rounded-lg hover:bg-portfolio-bg-subtle transition-all duration-200 hover-scale"
-              >
-                <CheckCircle className="w-6 h-6 text-portfolio-accent mt-1 flex-shrink-0" />
-                <span className="text-portfolio-text-light">{skill}</span>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-      </div>
-    </section>
+    <div className="py-8 md:py-12">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="max-w-4xl mx-auto"
+      >
+        <h2 className="text-2xl md:text-3xl font-bold text-portfolio-primary mb-6 text-center">
+          HABILIDADES
+        </h2>
+        
+        <div className="grid md:grid-cols-2 gap-4">
+          {skills.map((skill, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.4, delay: index * 0.05 }}
+              className="flex items-start gap-3 p-4 rounded-lg bg-card border border-border hover:shadow-sm transition-all duration-200"
+            >
+              <CheckCircle className="w-5 h-5 text-portfolio-accent mt-0.5 flex-shrink-0" />
+              <span className="text-sm md:text-base text-portfolio-text-light">{skill}</span>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
+    </div>
   )
 }
