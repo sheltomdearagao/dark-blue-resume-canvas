@@ -44,7 +44,14 @@ export function References() {
                   </p>
                   <div className="flex items-center gap-2 text-portfolio-text-light">
                     <Phone className="w-4 h-4" />
-                    <span className="text-xs">{reference.phone}</span>
+                    <a 
+                      href={`https://wa.me/${reference.phone.replace(/\D/g, '')}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs text-blue-600 hover:text-blue-800 hover:underline transition-colors"
+                    >
+                      {reference.phone}
+                    </a>
                   </div>
                 </div>
               </div>
