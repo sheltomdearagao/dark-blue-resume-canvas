@@ -28,7 +28,7 @@ export function Header() {
             SHELTOM DELANO
           </motion.h1>
           
-          <motion.h2 className="text-xl md:text-2xl lg:text-3xl text-portfolio-primary-light mb-3" initial={{
+          <motion.h2 initial={{
           opacity: 0,
           x: -50
         }} animate={{
@@ -37,9 +37,9 @@ export function Header() {
         }} transition={{
           duration: 0.6,
           delay: 0.4
-        }}>OLIVEIRA DE ARAGÃO</motion.h2>
+        }} className="text-xl md:text-2xl lg:text-3xl text-portfolio-primary-light mb-3 text-zinc-300 font-medium">OLIVEIRA DE ARAGÃO</motion.h2>
           
-          <motion.p className="text-base md:text-lg lg:text-xl text-portfolio-text-light max-w-2xl mx-auto mb-6" initial={{
+          <motion.p initial={{
           opacity: 0,
           y: 30
         }} animate={{
@@ -48,9 +48,10 @@ export function Header() {
         }} transition={{
           duration: 0.6,
           delay: 0.6
-        }}>
-            Professor de Língua Portuguesa | Especialista em Redação | Avaliador ENEM/ENADE
-          </motion.p>
+        }} className="text-base md:text-lg lg:text-xl text-portfolio-text-light max-w-2xl mx-auto mb-6 text-slate-300 font-normal">Professor de Língua Portuguesa 
+<br>Especialista em Redação </br>
+ 
+Avaliador ENEM/ENADE</motion.p>
           
           <motion.div className="flex flex-col md:flex-row gap-4 md:gap-6 justify-center items-center text-portfolio-text-light text-sm md:text-base" initial={{
           opacity: 0,
