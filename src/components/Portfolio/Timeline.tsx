@@ -51,7 +51,7 @@ export function Timeline() {
               onClick={() => setActiveTab('experience')}
               className={`px-4 py-2 text-sm md:text-base rounded-md transition-all duration-200 ${
                 activeTab === 'experience' 
-                  ? 'bg-portfolio-primary text-white' 
+                  ? 'bg-portfolio-primary text-white dark:text-gray-600' 
                   : 'text-portfolio-text-light hover:bg-muted'
               }`}
             >
@@ -61,7 +61,7 @@ export function Timeline() {
               onClick={() => setActiveTab('education')}
               className={`px-4 py-2 text-sm md:text-base rounded-md transition-all duration-200 ${
                 activeTab === 'education' 
-                  ? 'bg-portfolio-primary text-white' 
+                  ? 'bg-portfolio-primary text-white dark:text-gray-600' 
                   : 'text-portfolio-text-light hover:bg-muted'
               }`}
             >
