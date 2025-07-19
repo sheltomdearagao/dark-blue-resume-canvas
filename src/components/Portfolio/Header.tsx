@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import { Mail, MapPin, Phone } from "lucide-react";
 export function Header() {
-  return <section className="relative min-h-screen flex items-center justify-center py-20">
+  return <section className="relative min-h-screen flex items-center justify-center pt-16 pb-20">
       {/* Background with dots pattern */}
       <div className="absolute inset-0 bg-dots-sm bg-dots-sm opacity-20"></div>
       
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 relative z-10 mt-8">
         <motion.div initial={{
         opacity: 0,
         y: 50
